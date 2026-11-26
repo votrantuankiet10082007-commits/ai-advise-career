@@ -1,0 +1,23 @@
+{
+  "name": "ai-career-advisor",
+  "version": "2.4.0",
+  "description": "AI Career Advisor for IT Students - Vietnam IT Market Standard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test test-api.js",
+    "confirm-payment": "node scripts/confirm-payment.js"
+  },
+  "keywords": [
+    "ai-career-advisor",
+    "matching-engine",
+    "vietnam-it-jobs",
+    "education"
+  ],
+  "author": "AI Career Advisor Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  }
+}

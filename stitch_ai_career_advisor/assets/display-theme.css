@@ -1,0 +1,94 @@
+@media screen {
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --canvas: #181c30;
+    --ink: #eef0ff;
+    --muted: #c6cada;
+    --line: #515772;
+    --primary: #aebaff;
+    --primary-hover: #454e9d;
+    --accent: #303858;
+    --surface: #242940;
+  }
+
+  :root[data-theme="dark"] {
+    color: var(--ink);
+    background: var(--canvas);
+  }
+
+  :root[data-theme="dark"] :is(.top, .panel, .outline, input, textarea, select, details, dialog) {
+    background: var(--surface);
+  }
+
+  :root[data-theme="dark"] .top {
+    color: var(--ink);
+  }
+
+  :root[data-theme="dark"] :is(.primary, [role="tab"][aria-selected="true"], .tabs [aria-pressed="true"]) {
+    background: #343f88;
+    color: #fff;
+  }
+
+  :root[data-theme="dark"] .primary:hover {
+    background: var(--primary-hover);
+  }
+
+  :root[data-theme="dark"] #cancel-payment {
+    color: #ffaea6;
+  }
+
+  :root[data-theme="dark"] .paper {
+    color: #191e34;
+  }
+
+  :root[data-theme="dark"] .redirect-page {
+    background: var(--canvas) !important;
+  }
+}
+@media screen and (prefers-color-scheme: dark) {
+  :root[data-theme="system"] {
+    color-scheme: dark;
+    --canvas: #181c30;
+    --ink: #eef0ff;
+    --muted: #c6cada;
+    --line: #515772;
+    --primary: #aebaff;
+    --primary-hover: #454e9d;
+    --accent: #303858;
+    --surface: #242940;
+  }
+
+  :root[data-theme="system"] {
+    color: var(--ink);
+    background: var(--canvas);
+  }
+
+  :root[data-theme="system"] :is(.top, .panel, .outline, input, textarea, select, details, dialog) {
+    background: var(--surface);
+  }
+
+  :root[data-theme="system"] .top {
+    color: var(--ink);
+  }
+
+  :root[data-theme="system"] :is(.primary, [role="tab"][aria-selected="true"], .tabs [aria-pressed="true"]) {
+    background: #343f88;
+    color: #fff;
+  }
+
+  :root[data-theme="system"] .primary:hover {
+    background: var(--primary-hover);
+  }
+
+  :root[data-theme="system"] #cancel-payment {
+    color: #ffaea6;
+  }
+
+  :root[data-theme="system"] .paper {
+    color: #191e34;
+  }
+
+  :root[data-theme="system"] .redirect-page {
+    background: var(--canvas) !important;
+  }
+}

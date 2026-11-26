@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <script src="/stitch_ai_career_advisor/assets/display-theme.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV · AI Advise Career</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="/stitch_ai_career_advisor/assets/display-theme.css">
+<link rel="stylesheet" href="/stitch_ai_career_advisor/assets/jobs.css"></head>
+<body>
+  <header class="top"><div class="wrap nav">
+    <a class="brand" href="/">
+      <span class="mark"><img src="/stitch_ai_career_advisor/assets/logo.png" alt=""></span>
+      AI Advise Career
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <a href="/stitch_ai_career_advisor/nh_gi_g_i_ngh_nghi_p_it/code.html">Đánh giá nghề</a>
+      <a href="/stitch_ai_career_advisor/thi_truong_nganh_it/code.html">Thị trường IT</a>
+      <a href="/stitch_ai_career_advisor/chinh_sua_cv_ai/code.html" aria-current="page">CV</a>
+      <a href="/stitch_ai_career_advisor/dang_nhap_tai_khoan/code.html">Tài khoản</a>
+      <span id="session-status" aria-live="polite">Đang kiểm tra phiên…</span>
+      <button class="outline" id="nav-logout" hidden>Đăng xuất</button>
+      <a id="premium-button" href="/stitch_ai_career_advisor/premium/code.html">Premium</a>
+    </nav>
+  </div><form class="jobs-search wrap" role="search" action="/stitch_ai_career_advisor/tra_cuu_nghe/code.html"><input name="q" type="search" aria-label="Tìm công việc IT" placeholder="Tìm nghề, kỹ năng hoặc nhóm nghề…"><button>Tìm nghề</button></form></header>
+  <main class="wrap page">
+    <h1 id="page-heading">Chỉnh sửa CV</h1>
+    <div class="cv-workspace">
+      <section class="panel editor" aria-labelledby="page-heading">
+        <form id="cv-form">
+          <p>Các mục có dấu <strong>*</strong> là bắt buộc khi tạo CV.</p>
+          <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            <label>Họ tên *<input required data-field="name" autocomplete="name" maxlength="120"></label>
+            <label>Email *<input required data-field="email" type="email" autocomplete="email" maxlength="255"></label>
+            <label>Điện thoại<input data-field="phone" type="tel" autocomplete="tel" maxlength="50"></label>
+            <label>Địa điểm<input data-field="location" maxlength="120"></label>
+            <label>GitHub / Portfolio (tùy chọn)<input data-field="links" maxlength="300"></label>
+            <label>Vị trí mục tiêu<select data-field="targetRoleId" id="roles"><option value="">Chọn vị trí</option></select></label>
+            <p id="roles-status" role="status">Đang tải danh mục nghề…</p>
+            <label>Mục tiêu nghề nghiệp<textarea data-field="objective" rows="3" maxlength="500"></textarea></label>
+          </fieldset>
+          <div id="sections"></div>
+        </form>
+        <section aria-labelledby="ai-title">
+          <h2 id="ai-title">Gợi ý cho CV</h2>
+          <p>CV có thể chứa dữ liệu cá nhân. Khi bật tùy chọn gửi đi, mục tiêu, phần việc, kết quả dự án, từ khóa kỹ năng khớp và vị trí mục tiêu có thể được gửi đến Gemini hoặc OpenAI. Hãy bỏ thông tin nhạy cảm khỏi phần mô tả.</p>
+          <label class="consent"><input type="checkbox" id="consent"> Đồng ý gửi nội dung cần xử lý tới dịch vụ AI ngoài</label>
+          <div class="actions">
+            <button class="primary" type="button" id="generate">Tạo CV bằng AI</button>
+            <button class="outline" type="button" id="review">Chấm CV</button>
+            <button class="outline" type="button" id="apply-objective" hidden>Áp dụng mục tiêu gợi ý</button>
+            <button class="outline" type="button" id="apply-projects" hidden>Áp dụng mô tả dự án</button>
+          </div>
+          <p id="ai-status" role="status"></p>
+          <p id="keywords" hidden></p>
+          <ul id="suggestions"></ul>
+        </section>
+        <section aria-labelledby="save-title">
+          <h2 id="save-title">Lưu và tải</h2>
+          <p id="save-mode">Đang kiểm tra nơi lưu…</p>
+          <div class="actions">
+            <button class="primary" type="button" id="save" disabled>Lưu CV</button>
+            <button class="outline" type="button" id="delete" disabled>Xóa bản đã lưu</button>
+            <button class="outline" type="button" id="print">In / Xuất PDF</button>
+            <button class="outline" type="button" id="json">Tải JSON</button>
+          </div>
+          <p id="save-status" role="status"></p>
+        </section>
+      </section>
+      <section class="preview" aria-label="Xem trước CV">
+        <h2 class="preview-label">Xem trước · A4</h2>
+        <article class="paper" id="paper"></article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

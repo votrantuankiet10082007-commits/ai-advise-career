@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <script src="/stitch_ai_career_advisor/assets/display-theme.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Advise Career · Định hướng nghề IT</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="/stitch_ai_career_advisor/assets/display-theme.css">
+<link rel="stylesheet" href="/stitch_ai_career_advisor/assets/jobs.css"></head>
+
+<body>
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <span class="mark"><img src="/stitch_ai_career_advisor/assets/logo.png" alt=""></span>
+        AI Advise Career
+      </a>
+      <nav aria-label="Điều hướng chính">
+        <a href="/stitch_ai_career_advisor/nh_gi_g_i_ngh_nghi_p_it/code.html" aria-current="page">Đánh giá nghề</a>
+        <a href="/stitch_ai_career_advisor/thi_truong_nganh_it/code.html">Thị trường IT</a>
+        <a href="/stitch_ai_career_advisor/chinh_sua_cv_ai/code.html">CV</a>
+        <a href="/stitch_ai_career_advisor/dang_nhap_tai_khoan/code.html">Tài khoản</a>
+        <a id="premium-button" href="/stitch_ai_career_advisor/premium/code.html">Premium</a>
+        <span id="session-status" aria-live="polite">Đang kiểm tra phiên…</span>
+        <button class="outline" id="nav-logout" hidden>Đăng xuất</button>
+      </nav>
+    </div>
+  <form class="jobs-search wrap" role="search" action="/stitch_ai_career_advisor/tra_cuu_nghe/code.html"><input name="q" type="search" aria-label="Tìm công việc IT" placeholder="Tìm nghề, kỹ năng hoặc nhóm nghề…"><button>Tìm nghề</button></form></header>
+  <main class="wrap">
+    <section class="intro">
+      <p class="eyebrow">HƯỚNG NGHIỆP CHO SINH VIÊN IT</p>
+      <h1>Tìm hướng đi trong ngành IT.</h1>
+      <p class="lead">So sánh kỹ năng của bạn với yêu cầu của từng nghề và xem nên học gì tiếp theo.</p>
+    </section>
+    <div class="workspace" id="danh-gia">
+      <section class="panel">
+        <h2>Hồ sơ kỹ năng</h2>
+        <form id="assessment">
+          <label>Kỹ năng đã học
+            <textarea id="skills" rows="3" maxlength="700" placeholder="Ví dụ: java:3, sql:4, git:2"></textarea>
+          </label>
+          <small>Tách bằng dấu phẩy. Mức độ từ 1 đến 5. Mặc định là 3.</small>
+          <label>Nhóm nghề quan tâm
+            <select id="interest">
+              <option value="">Mọi nhóm nghề</option>
+              <option value="SOFTWARE_ENGINEERING">Phát triển phần mềm</option>
+              <option value="DATA_ANALYSIS">Phân tích dữ liệu</option>
+              <option value="SYSTEM_AND_SECURITY">Hệ thống và bảo mật</option>
+              <option value="FRONTEND DEVELOPER">Frontend Developer</option>
+              <option value="BACKEND_DEVELOPER">Backend Developer</option>
+              <option value="MOBILE_DEVELOPER">Mobile Developer</option>
+              <option value="QA_QC">QA/QC</option>
+              <option value="DEVOPS">DevOps</option>
+              <option value="FULLSTACK_DEVELOPER">Fullstack Developer</option>
+              <option value="IoT Engineer">Embedded / IoT Engineer</option>
+              <option value="blockchain">Blockchain</option>
+              <option value="AI_DEVELOPER">AI Developer</option>
+              <option value="BUSINESS_ANALYST">Business Analyst</option>
+              <option value="GAME_DEVELOPER">Game Developer</option>
+              <option value="IT Support">IT Helpdesk</option>
+              <option value="UI_UX_DESIGNER">UI/UX Designer</option>
+              <option value="CLOUD_ENGINEER">Cloud Engineer</option>
+              <option value="QA_TESTER">QA Tester</option>
+              <option value="AI_ENGINEER">AI Engineer</option>
+              <option value="HR_IT">HR IT</option>
+              <option value="Data Scientist">Data Scientist</option>
+              <option value="Business Analyst">Business Analyst</option>
+              <option value="Project Manager">Project Manager</option>
+              <option value="Data Analyst">Data Analyst</option>
+              <option value="Data Engineer">Data Engineer</option>
+              <option value="Data Visualization Engineer">Data Visualization Engineer</option>
+              <option value="Big Data Engineer">Big Data Engineer</option>
+              <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+              <option value="AI Engineer">AI Engineer</option>
+              <option value="AI Researcher">AI Researcher</option>
+              <option value="AI Product Manager">AI Product Manager</option>
+              <option value="AI Trainer">AI Trainer</option>
+              <option value="AI Annotator">AI Annotator</option>
+              <option value="AI Consultant">AI Consultant</option>
+              <option value="AI Sales">AI Sales</option>
+              <option value="AI Marketing">AI Marketing</option>
+            </select>
+          </label>
+          <label>Số giờ học mỗi tuần <input id="hours" type="number" min="1" max="80" value="15" required></label>
+          <button class="primary" type="submit">Xem mức phù hợp <span aria-hidden="true">→</span></button>
+          <p id="assessment-status" aria-live="polite" hidden></p>
+        </form>
+      </section>
+      <section class="panel results" aria-labelledby="results-heading">
+        <h2 id="results-heading">Kết quả đánh giá</h2>
+        <div id="results" aria-live="polite">
+          <p class="empty">Nhập kỹ năng để xem điểm phù hợp và các kỹ năng cần bổ sung.</p>
+        </div>
+      </section>
+    </div>
+    <section class="catalog" id="nghe">
+      <h2>Khám phá nghề IT</h2>
+      <p>Chọn một nghề để xem kỹ năng và thời gian học tham khảo.</p>
+      <div id="careers"></div>
+    </section>
+  <section class="jobs-panel" id="jobs-chart"><h2>Việc làm theo nhóm ngành IT</h2><p>Số chức danh trong danh mục. Chọn một nhóm để xem từng nghề.</p><details><summary>Phát triển phần mềm <meter aria-label="Số nghề" min="0" max="8" value="7"></meter> 7 nghề</summary><p><a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Frontend%20Developer">Frontend Developer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Backend%20Developer">Backend Developer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Fullstack%20Developer">Fullstack Developer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Mobile%20Developer">Mobile Developer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Game%20Developer">Game Developer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Embedded%20%2F%20IoT%20Engineer">Embedded / IoT Engineer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Blockchain">Blockchain</a></p></details><details><summary>Phân tích dữ liệu <meter aria-label="Số nghề" min="0" max="8" value="5"></meter> 5 nghề</summary><p><a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Data%20Analyst">Data Analyst</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Data%20Scientist">Data Scientist</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Data%20Engineer">Data Engineer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Data%20Visualization%20Engineer">Data Visualization Engineer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Big%20Data%20Engineer">Big Data Engineer</a></p></details><details><summary>Hệ thống và bảo mật <meter aria-label="Số nghề" min="0" max="8" value="3"></meter> 3 nghề</summary><p><a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=DevOps">DevOps</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Cloud%20Engineer">Cloud Engineer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=IT%20Helpdesk">IT Helpdesk</a></p></details><details><summary>Kiểm thử và chất lượng <meter aria-label="Số nghề" min="0" max="8" value="2"></meter> 2 nghề</summary><p><a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=QA%2FQC">QA/QC</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=QA%20Tester">QA Tester</a></p></details><details><summary>Trí tuệ nhân tạo <meter aria-label="Số nghề" min="0" max="8" value="6"></meter> 6 nghề</summary><p><a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Developer">AI Developer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Engineer">AI Engineer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Machine%20Learning%20Engineer">Machine Learning Engineer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Researcher">AI Researcher</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Trainer">AI Trainer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Annotator">AI Annotator</a></p></details><details><summary>Sản phẩm và kinh doanh <meter aria-label="Số nghề" min="0" max="8" value="8"></meter> 8 nghề</summary><p><a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Business%20Analyst">Business Analyst</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=Project%20Manager">Project Manager</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=UI%2FUX%20Designer">UI/UX Designer</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=HR%20IT">HR IT</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Product%20Manager">AI Product Manager</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Consultant">AI Consultant</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Sales">AI Sales</a> · <a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html?q=AI%20Marketing">AI Marketing</a></p></details><h3>Tuyển dụng IT theo quý</h3><p>Nguồn: ITviec · Việt Nam</p><div id="jobs-quarters" aria-live="polite"></div><script defer src="/stitch_ai_career_advisor/assets/quarters.js"></script><p><a href="/stitch_ai_career_advisor/tra_cuu_nghe/code.html">Tra cứu tất cả nghề →</a></p></section></main>
+  <footer class="wrap footer">AI Advise Career</footer>
+
+
+
+
+</body>
+
+</html>

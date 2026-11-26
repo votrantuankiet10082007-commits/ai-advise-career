@@ -1,0 +1,37 @@
+Phát triển phần mềm
+Frontend Developer|Lập trình giao diện web và xử lý tương tác trên trình duyệt.|HTML, CSS, JavaScript, khả năng truy cập
+Backend Developer|Thiết kế API, xử lý nghiệp vụ và lưu trữ dữ liệu phía máy chủ.|SQL, REST, kiểm thử API
+Fullstack Developer|Xây dựng tính năng từ giao diện đến API và cơ sở dữ liệu.|JavaScript, HTTP, SQL
+Mobile Developer|Phát triển ứng dụng điện thoại và tối ưu trải nghiệm trên thiết bị.|Kotlin, Swift, Flutter
+Game Developer|Xây dựng cơ chế chơi, xử lý vật lý và tối ưu tốc độ khung hình.|Unity, C#, C++
+Embedded / IoT Engineer|Viết firmware và kết nối cảm biến, thiết bị với hệ thống giám sát.|C/C++, vi điều khiển, MQTT
+Blockchain|Phát triển ứng dụng sổ cái phân tán và kiểm thử hợp đồng thông minh.|Solidity, mật mã ứng dụng, kiểm thử
+Phân tích dữ liệu
+Data Analyst|Truy vấn dữ liệu để giải thích biến động chỉ số và hỗ trợ quyết định.|SQL, Excel, thống kê
+Data Scientist|Xây dựng mô hình dự đoán và dùng thử nghiệm để đánh giá giả thuyết.|Python, thống kê, mô hình hóa
+Data Engineer|Thiết kế luồng thu thập, làm sạch và cung cấp dữ liệu cho phân tích.|SQL, ETL, kho dữ liệu
+Data Visualization Engineer|Thiết kế biểu đồ và dashboard để người dùng khám phá chỉ số.|Power BI, Tableau, trực quan hóa
+Big Data Engineer|Xử lý tập dữ liệu lớn bằng các hệ thống lưu trữ và tính toán phân tán.|Spark, Kafka, phân vùng dữ liệu
+Hệ thống và bảo mật
+DevOps|Tự động hóa kiểm thử, triển khai và giám sát dịch vụ.|CI/CD, Linux, Docker
+Cloud Engineer|Thiết kế hạ tầng đám mây, phân quyền truy cập và theo dõi chi phí.|AWS, Azure, Terraform
+IT Helpdesk|Tiếp nhận yêu cầu hỗ trợ, chẩn đoán lỗi máy trạm, tài khoản và kết nối.|Windows, mạng máy tính, giao tiếp
+Kiểm thử và chất lượng
+QA/QC|Xây dựng quy trình chất lượng và kiểm tra sản phẩm theo tiêu chí nghiệm thu.|Quy trình phát triển, quản lý lỗi, kiểm thử
+QA Tester|Thiết kế ca kiểm thử, chạy thử, mô tả lỗi và kiểm tra bản sửa.|Test case, Postman, kiểm thử hồi quy
+Trí tuệ nhân tạo
+AI Developer|Tích hợp mô hình vào tính năng ứng dụng và đánh giá kết quả đầu ra.|Python, API mô hình, đánh giá
+AI Engineer|Xây dựng và vận hành hệ thống suy luận đáp ứng yêu cầu về độ chính xác và độ trễ.|Python, triển khai mô hình, giám sát
+Machine Learning Engineer|Huấn luyện, triển khai và theo dõi mô hình học từ dữ liệu.|PyTorch, MLOps, đánh giá mô hình
+AI Researcher|Đề xuất phương pháp mới và kiểm chứng bằng thực nghiệm có thể tái lập.|Toán, đọc bài báo, thiết kế thí nghiệm
+AI Trainer|Biên soạn ví dụ và phản hồi để cải thiện hành vi của mô hình.|Viết hướng dẫn, đánh giá phản hồi, chuyên môn lĩnh vực
+AI Annotator|Gán nhãn dữ liệu theo tiêu chí thống nhất và kiểm tra chất lượng nhãn.|Gán nhãn, đọc hướng dẫn, kiểm tra chéo
+Sản phẩm và kinh doanh
+Business Analyst|Làm rõ nhu cầu nghiệp vụ và chuyển thành yêu cầu để nhóm phát triển triển khai.|Phỏng vấn, BPMN, tiêu chí nghiệm thu
+Project Manager|Lập kế hoạch và phối hợp con người, tiến độ, ngân sách và rủi ro của dự án.|Ước lượng, giao tiếp, quản lý rủi ro
+UI/UX Designer|Nghiên cứu người dùng, thiết kế luồng thao tác và thử nghiệm nguyên mẫu giao diện.|Figma, wireframe, usability testing
+HR IT|Tuyển dụng và hỗ trợ phát triển nhân sự cho các đội công nghệ.|Tìm ứng viên, phỏng vấn, hiểu vai trò IT
+AI Product Manager|Chọn bài toán sản phẩm phù hợp với AI và đặt tiêu chí đánh giá giá trị cho người dùng.|Khám phá sản phẩm, chỉ số, đánh giá AI
+AI Consultant|Phân tích quy trình doanh nghiệp và đánh giá tính khả thi của giải pháp AI.|Tư vấn, phân tích chi phí, thử nghiệm
+AI Sales|Tìm hiểu nhu cầu khách hàng và phối hợp đội kỹ thuật trình diễn giải pháp AI.|Bán hàng B2B, demo, đàm phán
+AI Marketing|Lập kế hoạch tiếp thị sản phẩm AI hoặc ứng dụng AI để thử nghiệm nội dung chiến dịch.|Phân khúc, nội dung, đo chuyển đổi

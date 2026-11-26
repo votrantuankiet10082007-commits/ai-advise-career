@@ -1,0 +1,36 @@
+main { padding-block: 48px; }
+main > section { margin-block: 24px; }
+h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 22px; }
+.price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.price-card { display: grid; align-content: start; min-width: 0; }
+.price-card button { justify-self: start; }
+.price { color: var(--primary); font-weight: 750; font-size: 1.55rem; }
+.terms { margin: 18px 0 8px; }
+#activate a { display: inline-block; margin: 10px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.tabs [aria-pressed="true"] { background: var(--primary); color: white; }
+#study > select { max-width: 580px; display: block; }
+#start-date { width: auto; max-width: 100%; margin: 5px; }
+#months article, #lessons article, #chat article { padding: 12px 0; border-bottom: 1px solid var(--line); }
+#lessons article button, #months article h4 { margin-block: 8px; }
+#lessons p { margin-bottom: 6px; }
+progress { display: block; width: min(220px, 100%); accent-color: var(--primary); }
+#chat p { white-space: pre-wrap; overflow-wrap: anywhere; }
+form label.consent { display: flex; align-items: center; gap: 8px; }
+.consent input { width: auto; }
+#payment-details { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px; }
+#payment-details dd { margin: 0; overflow-wrap: anywhere; }
+.notice:empty { margin: 0; }
+@media (max-width: 720px) { .price-grid { grid-template-columns: 1fr; } }
+@media print {
+  .top, #pricing, #status, #activate, #membership, #study > label, #role, .tabs,
+  #learn, #tutor, #print, #payment, label[for="start-date"], #start-date { display: none !important; }
+  .wrap { width: 100%; }
+  main { padding: 0; }
+  #schedule { border: 0; padding: 0; }
+  #months h3, #months h4 { break-after: avoid; }
+}
+
+#payment-qr { margin: 12px 0; }
+#payment-qr img { display: block; width: min(240px, 100%); height: auto; margin: 0 auto 8px; }
+#payment-qr figcaption { font-size: .9rem; }

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <script src="/stitch_ai_career_advisor/assets/display-theme.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thị trường IT · AI Advise Career</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="/stitch_ai_career_advisor/assets/display-theme.css">
+<link rel="stylesheet" href="/stitch_ai_career_advisor/assets/jobs.css"></head>
+<body>
+  <header class="top"><div class="wrap nav">
+    <a class="brand" href="/">
+      <span class="mark"><img src="/stitch_ai_career_advisor/assets/logo.png" alt=""></span>
+      AI Advise Career
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <a href="/stitch_ai_career_advisor/nh_gi_g_i_ngh_nghi_p_it/code.html">Đánh giá nghề</a>
+      <a href="/stitch_ai_career_advisor/thi_truong_nganh_it/code.html" aria-current="page">Thị trường IT</a>
+      <a href="/stitch_ai_career_advisor/chinh_sua_cv_ai/code.html">CV</a>
+      <a href="/stitch_ai_career_advisor/dang_nhap_tai_khoan/code.html">Tài khoản</a>
+      <span id="session-status" aria-live="polite">Đang kiểm tra phiên…</span>
+      <button class="outline" id="nav-logout" hidden>Đăng xuất</button>
+      <a id="premium-button" href="/stitch_ai_career_advisor/premium/code.html">Premium</a>
+    </nav>
+  </div><form class="jobs-search wrap" role="search" action="/stitch_ai_career_advisor/tra_cuu_nghe/code.html"><input name="q" type="search" aria-label="Tìm công việc IT" placeholder="Tìm nghề, kỹ năng hoặc nhóm nghề…"><button>Tìm nghề</button></form></header>
+  <main class="wrap page">
+    <h1>Thị trường ngành IT</h1>
+    <p>Số liệu tham khảo, không phải khảo sát thời gian thực.</p>
+    <p id="market-status" role="status">Đang tải danh mục…</p>
+    <div id="market-content" hidden>
+      <form class="panel filters" id="filters">
+        <label>Nhóm ngành<select id="track"><option value="">Tất cả nhóm ngành</option></select></label>
+        <label>Sắp xếp<select id="sort"><option value="salary">Lương tối đa cao trước</option><option value="weeks">Thời gian học ngắn trước</option></select></label>
+      </form>
+      <div class="workspace charts">
+        <section class="panel">
+          <h2>Khoảng lương khởi điểm</h2>
+          <p>Chiều dài cột thể hiện mức tối đa. Nhãn ghi khoảng min–max.</p>
+          <div id="salary-chart" class="salary-chart"></div>
+        </section>
+        <section class="panel">
+          <h2>Kỹ năng ưu tiên</h2>
+          <p>Xếp theo tổng trọng số trong danh mục nghề đang lọc.</p>
+          <ol id="skills-chart"></ol>
+        </section>
+      </div>
+      <section class="panel">
+        <h2>So sánh nghề</h2>
+        <div class="table-scroll" tabindex="0" aria-label="Cuộn bảng so sánh nghề">
+          <table>
+            <thead><tr><th scope="col">Nghề</th><th scope="col">Nhóm ngành</th><th scope="col">Lương (triệu đồng)</th><th scope="col">Học (tuần)</th></tr></thead>
+            <tbody id="roles"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Nhận xét từ danh mục tham khảo</h2>
+        <button type="button" class="outline" id="comment">Xem nhận xét</button>
+        <p id="comment-status" role="status"></p>
+      </section>
+      <section class="panel">
+        <h2>Đánh giá kỹ năng của tôi</h2>
+        <form id="evaluate">
+          <label>Kỹ năng đã học<select id="skill-select" multiple size="8" required></select></label>
+          <small>Có thể chọn nhiều kỹ năng. Mỗi kỹ năng được tính ở mức 3/5.</small>
+          <div class="actions"><button class="primary" type="submit">Xem mức phù hợp của tôi</button></div>
+        </form>
+        <p id="evaluate-status" role="status"></p>
+        <ol id="matches"></ol>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

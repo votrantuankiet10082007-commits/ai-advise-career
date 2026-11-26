@@ -1,0 +1,26 @@
+[Unit]
+Description=Advise Career
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=advise-career
+Group=advise-career
+WorkingDirectory=/opt/advise-career
+ExecStart=/usr/local/bin/node /opt/advise-career/server.js
+Environment=NODE_ENV=production
+Environment=HOST=127.0.0.1
+Environment=PORT=8080
+Environment=DATABASE_DIR=/var/lib/advise-career
+StateDirectory=advise-career
+StateDirectoryMode=0700
+UMask=0077
+Restart=on-failure
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

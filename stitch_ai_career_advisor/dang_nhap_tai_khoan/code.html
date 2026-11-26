@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <script src="/stitch_ai_career_advisor/assets/display-theme.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tài khoản · AI Advise Career</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="/stitch_ai_career_advisor/assets/display-theme.css">
+<link rel="stylesheet" href="/stitch_ai_career_advisor/assets/jobs.css"></head>
+<body>
+  <header class="top"><div class="wrap nav">
+    <a class="brand" href="/">
+      <span class="mark"><img src="/stitch_ai_career_advisor/assets/logo.png" alt=""></span>
+      AI Advise Career
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <a href="/stitch_ai_career_advisor/nh_gi_g_i_ngh_nghi_p_it/code.html">Đánh giá nghề</a>
+      <a href="/stitch_ai_career_advisor/thi_truong_nganh_it/code.html">Thị trường IT</a>
+      <a href="/stitch_ai_career_advisor/chinh_sua_cv_ai/code.html">CV</a>
+      <a href="/stitch_ai_career_advisor/dang_nhap_tai_khoan/code.html" aria-current="page">Tài khoản</a>
+      <span id="session-status" aria-live="polite">Đang kiểm tra phiên…</span>
+      <button class="outline" id="nav-logout" hidden>Đăng xuất</button>
+      <a id="premium-button" href="/stitch_ai_career_advisor/premium/code.html">Premium</a>
+    </nav>
+  </div><form class="jobs-search wrap" role="search" action="/stitch_ai_career_advisor/tra_cuu_nghe/code.html"><input name="q" type="search" aria-label="Tìm công việc IT" placeholder="Tìm nghề, kỹ năng hoặc nhóm nghề…"><button>Tìm nghề</button></form></header>
+  <main class="wrap page">
+    <h1>Tài khoản</h1>
+    <div class="account-layout"><aside class="account-menu"><div class="identity"><b id="avatar">AC</b><div><strong id="identity-name">AI Advise Career</strong><small id="identity-detail">Không gian tài khoản</small></div></div>
+<button type="button" id="show-profile" aria-pressed="true">Hồ sơ cá nhân</button><button type="button" id="show-settings" aria-pressed="false">Cài đặt hiển thị</button></aside>
+<section id="profile-panel" class="panel account"><h2>Hồ sơ cá nhân</h2>
+      <p id="status" role="status">Đang tải tài khoản…</p>
+      <div id="guest" hidden>
+        <div class="actions" role="tablist" aria-label="Chế độ tài khoản">
+          <button class="outline" id="login-tab" type="button" role="tab" aria-controls="credentials" aria-selected="true">Đăng nhập</button>
+          <button class="outline" id="register-tab" type="button" role="tab" aria-controls="credentials" aria-selected="false">Đăng ký</button>
+        </div>
+        <form id="credentials" role="tabpanel" aria-labelledby="login-tab">
+          <label id="name-field" hidden>Họ tên<input name="name" maxlength="120" autocomplete="name"></label>
+          <label>Email<input name="email" type="email" maxlength="255" autocomplete="email" required></label>
+          <label>Mật khẩu<input name="password" type="password" maxlength="128" autocomplete="current-password" required></label>
+          <div class="actions">
+            <button type="button" class="outline" id="visibility" aria-pressed="false">Hiện mật khẩu</button>
+            <button type="submit" class="primary">Đăng nhập</button>
+          </div>
+        </form>
+        <small>Hiện chưa có xác minh email và chức năng quên mật khẩu.</small>
+      </div>
+      <form id="profile" hidden>
+        <p id="profile-email"></p>
+      <p>Mã người dùng <strong id="public-id"></strong></p>
+        <label>Họ tên<input name="name" maxlength="120" required></label>
+        <label>Avatar<select name="avatar">
+          <option value="initials">Chữ viết tắt</option>
+          <option value="photo">Ảnh cá nhân</option>
+          <option value="laptop">💻 Máy tính</option>
+          <option value="rocket">🚀 Tên lửa</option>
+          <option value="robot">🤖 Robot</option>
+        </select></label>
+        <label>Chọn ảnh từ máy tính
+          <input id="avatar-file" type="file" accept="image/jpeg,image/png,image/webp">
+        </label>
+        <label>Trường<input name="university" maxlength="120"></label>
+        <label>Vị trí hiện tại<input name="role" maxlength="120"></label>
+        <label>Nghề mục tiêu<input name="targetSpecialty" maxlength="120"></label>
+        <fieldset class="link-grid"><legend>Liên kết cá nhân</legend>
+          <label>Facebook<input type="url" name="facebook" maxlength="500" placeholder="https://www.facebook.com/…"></label>
+          <label>LinkedIn<input type="url" name="linkedin" maxlength="500" placeholder="https://www.linkedin.com/in/…"></label>
+          <label>GitHub<input type="url" name="github" maxlength="500" placeholder="https://github.com/…"></label>
+          <label>Dự án cá nhân (tùy chọn)<input type="url" name="projectUrl" maxlength="500" placeholder="https://…"></label>
+        </fieldset>
+        <div class="actions"><button class="primary" type="submit">Lưu hồ sơ</button></div>
+        <p id="tier"></p>
+        <a href="/stitch_ai_career_advisor/premium/code.html">Quản lý Premium</a>
+      </form>
+    </section>
+    <section class="panel" id="settings-panel" hidden><h2>Cài đặt hiển thị</h2><p>Áp dụng cho tất cả các trang trên trình duyệt này.</p>
+<label>Tông giao diện<select id="theme"><option value="light">Sáng</option><option value="dark">Tối</option><option value="system">Theo thiết bị</option></select></label>
+<label>Cỡ chữ<select id="size"><option value="normal">Tiêu chuẩn</option><option value="large">Lớn</option></select></label>
+<div class="actions"><button id="reset-settings" class="outline">Khôi phục mặc định</button></div><p id="settings-status" role="status"></p></section></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <script src="/stitch_ai_career_advisor/assets/display-theme.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premium · AI Advise Career</title>
+  <link rel="stylesheet" href="../nh_gi_g_i_ngh_nghi_p_it/style.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="/stitch_ai_career_advisor/assets/display-theme.css">
+<link rel="stylesheet" href="/stitch_ai_career_advisor/assets/jobs.css"></head>
+
+<body>
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="/"><span class="mark"><img src="../assets/logo.png" alt=""></span>AI Advise Career</a>
+      <nav aria-label="Điều hướng chính">
+        <a href="/">Đánh giá nghề</a>
+        <a href="../thi_truong_nganh_it/code.html">Thị trường IT</a>
+        <a href="../chinh_sua_cv_ai/code.html">CV</a>
+        <a href="../dang_nhap_tai_khoan/code.html">Tài khoản</a>
+        <a href="./code.html" aria-current="page">Premium</a>
+      </nav>
+    </div>
+  <form class="jobs-search wrap" role="search" action="/stitch_ai_career_advisor/tra_cuu_nghe/code.html"><input name="q" type="search" aria-label="Tìm công việc IT" placeholder="Tìm nghề, kỹ năng hoặc nhóm nghề…"><button>Tìm nghề</button></form></header>
+  <main class="wrap">
+    <p class="notice" id="status" role="status"></p>
+    <section id="pricing">
+      <h1>Bảng giá Premium</h1>
+      <div id="prices" class="price-grid"></div>
+      <p class="terms">Mua một lần, quyền học không hết hạn. Lượt hỏi AI tính theo tổng hạn mức của gói và không đặt lại
+        hằng tháng. Khi nâng cấp, bạn trả phần chênh lệch giá và được cộng số lượt tương ứng với phần tăng hạn mức.</p>
+      <p>Thanh toán được đối soát thủ công. Thời gian kích hoạt phụ thuộc vào lúc chủ web đối chiếu sao kê. Hiện chưa hỗ
+        trợ hoàn tiền.</p>
+    </section>
+    <section id="activate" hidden>
+      <h2>Kích hoạt ngành học</h2>
+      <p>Hệ thống xếp hạng ngành từ hồ sơ đánh giá. Thứ tự được khóa sau khi kích hoạt.</p>
+      <button id="unlock" class="primary">Kích hoạt từ hồ sơ</button>
+      <a href="/">Mở trang đánh giá nghề</a>
+    </section>
+    <section id="study" hidden>
+      <h2 id="membership"></h2>
+      <label for="role">Ngành học</label>
+      <select id="role"></select>
+      <div class="tabs" aria-label="Khung học tập">
+        <button class="outline" data-panel="learn">Học tập</button>
+        <button class="outline" data-panel="schedule">Lịch học</button>
+        <button class="outline" data-panel="tutor">Hỏi AI</button>
+      </div>
+      <div id="learn" class="panel">
+        <h3>Giáo trình</h3>
+        <div id="lessons"></div>
+      </div>
+      <div id="schedule" class="panel" hidden>
+        <h3>Lịch học theo tháng</h3>
+        <label for="start-date">Ngày bắt đầu</label>
+        <input id="start-date" type="date">
+        <button class="outline" id="print" disabled>In / xuất PDF</button>
+        <div id="months"></div>
+      </div>
+      <div id="tutor" class="panel" hidden>
+        <h3>Gia sư AI</h3>
+        <p id="usage"></p>
+        <p id="upgrade-message" hidden>Bạn đã hết lượt. Xem bảng giá để nâng cấp nếu còn gói cao hơn.</p>
+        <div id="chat" aria-live="polite"></div>
+        <form id="ask">
+          <label>Bài học (tùy chọn)<select id="lesson">
+              <option value="">Theo ngành đang chọn</option>
+            </select></label>
+          <label>Câu hỏi<textarea id="question" required maxlength="600" rows="4"></textarea></label>
+          <p>AI có thể trả lời sai. Câu hỏi được gửi tới dịch vụ AI ngoài. Hãy bỏ thông tin cá nhân khỏi nội dung.</p>
+          <label class="consent"><input type="checkbox" id="consent" required> Tôi đồng ý gửi câu hỏi tới dịch vụ
+            AI.</label>
+          <button class="primary" id="send">Gửi câu hỏi</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <dialog id="payment" aria-labelledby="payment-title">
+    <div class="dialog-head">
+      <h2 id="payment-title">Thanh toán chuyển khoản</h2><button class="text close" id="close-payment"
+        aria-label="Đóng">×</button>
+    </div>
+    <p id="payment-status" role="status"></p>
+    <figure id="payment-qr" hidden>
+      <img id="payment-qr-image" alt="Mã QR chuyển khoản">
+      <figcaption>Quét bằng ứng dụng ngân hàng. Trước khi chuyển, kiểm tra người nhận và điền đúng số tiền, mã đơn bên
+        dưới.</figcaption>
+    </figure>
+    <dl id="payment-details"></dl>
+    <button class="outline" id="check-payment">Kiểm tra trạng thái</button>
+    <button type="button" class="outline" id="cancel-payment" hidden>Hủy đơn</button>
+  </dialog>
+</body>
+
+</html>
